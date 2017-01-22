@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>开门大吉</title>
+    <style>
+        .container{
+            background: #ff0000;
+            width:402px;height: 202px;
+            margin: 0 auto;
+            transform: skew(10deg);
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+        .left{
+            background: #fff;
+            /*border:0px solid #161616;*/
+            z-index: 10;
+            width: 200px;
+            height: 200px;
+            float: left;
+            transform-origin:left center;
+            transition: all 3s linear;
+        }
+        .right{
+            background: #fff;
+            /*border:0px solid #161616;*/
+            width: 200px;
+            height: 200px;
+            z-index: 10;
+            float: left;
+            transform-origin: right center;
+            transition: all 3s linear;
+        }
+        .container:hover .left{
+            transform: rotateY(90deg);
+
+        }
+        .container:hover .right{
+            transform: rotateY(-90deg);
+
+        }
+
+        .container:hover:after{
+            content: '开门大吉';
+            position: relative;
+            top:-120px;
+            left:160px;
+            font-size:20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>

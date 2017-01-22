@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" class=" js cssanimations"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Demo 4</title>
+
+
+		<!--<link rel="stylesheet" type="text/css" href="./css/normalize.css">-->
+
+		<!--<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">-->
+
+		<link rel="stylesheet" type="text/css" href="./css/demo.css">
+
+		<link rel="stylesheet" type="text/css" href="./css/animate.css">
+
+		<link rel="stylesheet" type="text/css" href="./css/mockup4.css">
+
+		<script src="./js/modernizr.custom.js"></script>
+
+	</head>
+
+	<body class="demo-4">
+
+		<div class="container">
+
+			
+
+			<div id="wrap" class="wrap">
+
+				<div class="mockup" style="transform: scale3d(1.00158, 1.00158, 1);">
+
+					<img class="mockup__img" src="./img/mockup4.jpg">
+
+					<!--<div class="mobile">-->
+
+						<!--<ul id="slideshow-1" class="slideshow">-->
+
+							<!--<li class="slideshow__item"><img src="./img/1.png"></li>-->
+
+							<!--<li class="slideshow__item current"><img src="./img/2.png"></li>-->
+
+							<!--<li class="slideshow__item"><img src="./img/3.png"></li>-->
+
+							<!--<li class="slideshow__item"><img src="./img/4.png"></li>-->
+
+						<!--</ul>-->
+
+					<!--</div>-->
+
+					<div class="screen">
+
+						<ul id="slideshow-2" class="slideshow">
+
+							<li class="slideshow__item current out--next"><img src="./img/1(1).png"></li>
+
+							<li class="slideshow__item in--next"><img src="./img/2(1).png"></li>
+
+							<li class="slideshow__item"><img src="./img/3(1).png"></li>
+
+							<li class="slideshow__item"><img src="./img/4(1).png"></li>
+
+						</ul>
+
+					</div>
+
+
+				</div>
+
+			</div>
+
+
+			
+
+		</div>
+
+		<script src="./js/classie.js"></script>
+
+		<script src="./js/main.js"></script>
+
+		<script>
+
+			(function() {
+
+				new Slideshow( document.getElementById( 'slideshow-1' ) );
+
+				setTimeout( function() {
+
+					new Slideshow( document.getElementById( 'slideshow-2' ) );
+
+				}, 1750 );
+
+
+
+				/* Mockup responsiveness */
+
+				var body = docElem = window.document.documentElement,
+
+					wrap = document.getElementById( 'wrap' ),
+
+					mockup = wrap.querySelector( '.mockup' ),
+
+					mockupWidth = mockup.offsetWidth;
+
+
+
+				scaleMockup();
+
+
+
+				function scaleMockup() {
+
+					var wrapWidth = wrap.offsetWidth,
+
+						val = wrapWidth / mockupWidth;
+
+
+
+					mockup.style.transform = 'scale3d(' + val + ', ' + val + ', 1)';
+
+				}
+
+				
+
+				window.addEventListener( 'resize', resizeHandler );
+
+
+
+				function resizeHandler() {
+
+					function delayed() {
+
+						resize();
+
+						resizeTimeout = null;
+
+					}
+
+					if ( typeof resizeTimeout != 'undefined' ) {
+
+						clearTimeout( resizeTimeout );
+
+					}
+
+					resizeTimeout = setTimeout( delayed, 50 );
+
+				}
+
+
+
+				function resize() {
+
+					scaleMockup();
+
+				}
+
+			})();
+
+		</script>
+
+	
+
+
+
+</body></html>

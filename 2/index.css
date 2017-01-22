@@ -1,0 +1,44 @@
+*{
+	margin: 0;
+}
+.logopart{
+	height: 80px;
+	width: 100%;
+	background-color: #f2f2f8;
+	position: relative;
+}
+.title{
+	height: 100px;
+	width: 270px;
+	position: relative;
+	margin: auto;
+}
+.a{
+	font-size: 30px;
+	font-family: "微软雅黑";
+	height: 65px;
+	width: 100%;
+	position: absolute;
+	margin-left: auto;
+    top: 20px;
+}
+.fujiansheng,.fuzhoushi,.putianshi,.quanzhoushi,.xiamenshi,.zhangzhoushi,.longyanshi,.shanghangshi{
+	border: 2px black solid;
+}
+.all{
+	position: relative;
+	width: 100%;
+	height: 1110px;
+}
+.background{
+	width: 100%;
+	height: 1110px;
+	background-image: url(1.jpg);
+	background-size: 100% 100%;
+	opacity: 0.7;
+}
+.content{
+	position: absolute;
+	width: 100%;
+	top:0px;
+}

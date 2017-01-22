@@ -1,0 +1,110 @@
+.bottom{
+	background-image: url(../images/1.jpg);
+	background-size: 100% 100%;
+	height: calc(100% - 115px);
+	width: 100%;
+	
+}
+.bone{
+	display: flex;
+}
+.bone p{
+	width: 100px;
+	text-align: center;
+	margin-left: 28%;
+	color: white;
+	-moz-user-select: none;
+}
+.bone p:hover{
+	cursor: pointer;
+}
+.btwo{
+	
+	width: 40%;
+	height: 30px;
+	margin-left: 30%;
+	-moz-user-select: none;
+}
+.btwo div{
+	cursor: pointer;
+	display: inline-block;
+	width: 18.5%;
+	height: 100%;
+	background-color: cadetblue;
+	text-align: center;
+	line-height: 30px;
+	padding: 1px;
+	box-sizing: border-box;
+	border-radius: 8px;
+}
+.btwo #one{
+	background-color: blanchedalmond;
+}
+.btwo div:hover{
+	background-color: blanchedalmond;
+}
+
+.bthree{
+	width: 520px;
+	height: 240px;
+	background-image: url(../images/3C4A.tmp.jpg);
+	background-size: 100% 100%;
+	margin-top: 20px;
+	margin-left: 30%;
+}
+
+.bthree{
+	width: 520px;
+	height: 240px;
+	background-image: url(../images/3C4A.tmp.jpg);
+	background-size: 100% 100%;
+	margin-top: 20px;
+	margin-left: 30%;
+}
+.fiveday{
+	
+	width: 520px;
+	height: 200px;
+	background-color: white;
+	position: absolute;
+	left: 30%;
+	top: 220px;
+	display: flex;
+}
+.fiveday div{
+	width: 20%;
+	background-image: linear-gradient(deepskyblue,lightskyblue);
+	border: 1px solid #00BFFF;
+}
+.fiveday div:hover{
+	cursor: pointer;
+}
+.fiveday div p{
+	width: 100px;
+	font-size: smaller;
+	text-align: center;
+}
+
+.fiveday div img{
+	margin-left: 30%;
+}
+.oneday{
+	position: absolute;
+	left: 45%;
+	top: 430px;
+}
+.oneday p{
+	color: white;
+	width: 100px;
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.onedayp1{
+	font-size: xx-large;
+}
+.oneday img{
+	height: 50%;
+	width: 50%;
+	margin-left: 10%;
+}

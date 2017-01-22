@@ -1,0 +1,391 @@
+@charset "utf-8";
+/* CSS Document */
+a, audio, blockquote, body, button, caption, dd, del, div, dl, dt, embed, fieldset, footer, form, h1, h2, h3, h4, h5, h6, header, img, input, label, li, mark, nav, ol, output, p, pre, progress, section, span, sub, summary, table, tbody, td, tfoot, th, thead, time, tr, ul, video {
+    padding: 0;
+    margin: 0;
+}
+address, caption, cite, code, figcaption, h1, h2, h3, h4, h5, h6, pre, strong, th {
+    font-style: normal;
+    font-weight: 400;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+dl {
+    display: block;
+    -webkit-margin-before: 5px;
+    -webkit-margin-after: 5px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+.overflowH {
+    overflow: hidden;
+}
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+body {
+    font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-size: 14px;
+    color: #424242;
+    background-color: #fafafa
+}
+.button {
+    cursor: pointer;
+    -webkit-transition: background-color .3s ease-in-out;
+    -moz-transition: background-color .3s ease-in-out;
+    -o-transition: background-color .3s ease-in-out;
+    transition: background-color .3s ease-in-out;
+}
+
+a {
+    color: #f39b16;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+a, a.gray3_red, a.red_no:hover, a:hover {
+    text-decoration: none;
+}
+
+/*top*/
+.top {
+    background-color: #484747;
+    color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999
+}
+
+.top .nav {
+    float: left;
+}
+
+.top h1 {
+    float: right;
+    font-size: 24px;
+    padding-right: 0;
+    padding-top: 28px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+/*nav*/
+nav {
+    text-align: center;
+    float: left;
+}
+
+nav ul ul {
+    display: none;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul {
+    padding: 12px 0;
+    list-style: none;
+    position: relative;
+    display: inline-table;
+
+}
+
+nav ul:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li:hover {
+    background: #f39b16;
+    color: #fff;
+}
+
+nav ul li:hover a {
+    color: #fff;
+}
+
+nav ul li a {
+    display: block;
+    padding: 25px 30px;
+    color: #eee;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul ul {
+    background: #484747;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+}
+
+nav ul ul li {
+    float: none;
+    border-bottom: 1px solid #555;
+    position: relative;
+}
+
+nav ul ul li a {
+    padding: 15px 30px;
+    color: #fff;
+
+}
+
+nav ul ul li a:hover {
+    background: #f39b16;
+    color: #fff;
+}
+
+nav ul ul ul {
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+.nav .trial, .nav .trial:hover {
+    color: #fff;
+}
+
+/*banner*/
+#slide {
+    min-width: 1100px;
+    height: 572px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 60px
+}
+
+#slide ul {
+    position: absolute;
+    left: 0;
+}
+
+#slide ul li {
+    float: left;
+}
+
+#slide ul li img {
+    position: relative;
+    left: 0;
+}
+#slide ol {
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    text-align: center;
+}
+#slide ol li {
+    width: 11px;
+    height: 11px;
+    background: white;
+    display: inline-block;
+    font-size: 0;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    opacity: 0.6;
+    margin-left: 3px;
+    margin-right: 3px
+}
+
+#slide ol li.selected {
+    background: #f39b16
+}
+
+#slide ol li a {
+    height: 11px;
+    display: block;
+}
+
+.pr {
+    position: relative;
+}
+
+.main {
+    width: 1100px;
+    margin: 0 auto;
+}
+.fl {
+    float: left;
+}
+
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none;}
+input, button {
+    outline: none;
+    border: none;
+}
+.login-wrap{
+    width:100%;
+    margin:auto;
+    max-width: 380px;
+    min-height: 420px;
+    position:absolute;
+    box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+    top:20%;right:6%;
+    border-radius: 30px;
+}
+.login-html{
+    width:100%;
+    height:100%;
+    position:absolute;
+    padding:50px 70px 50px 70px;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 30px;
+}
+.login-html .sign-in-htm,
+.login-html .sign-up-htm{
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    position:absolute;
+    -webkit-transform:rotateY(180deg);
+    transform:rotateY(180deg);
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden;
+    -webkit-transition:all .4s linear;
+    transition:all .4s linear;
+}
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check{
+    display:none;
+}
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button{
+    text-transform:uppercase;
+}
+.login-html .tab{
+    font-size:22px;
+    margin-right:15px;
+    padding-bottom:5px;
+    margin:0 15px 10px 0;
+    display:inline-block;
+    border-bottom:2px solid transparent;
+}
+.login-html .sign-in:checked + .tab,
+.login-html .sign-up:checked + .tab{
+    color:#fff;
+    border-color:#1161ee;
+}
+.login-form{
+    min-height:345px;
+    position:relative;
+    -webkit-perspective:1000px;
+    perspective:1000px;
+    -webkit-transform-style:preserve-3d;
+    transform-style:preserve-3d;
+}
+.login-form .group{
+    margin-bottom:15px;
+}
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button{
+    width:100%;
+    color:#fff;
+    display:block;
+}
+.login-form .group .input,
+.login-form .group .button{
+    border:none;
+    padding:15px 20px;
+    border-radius:25px;
+    background:rgba(255, 255, 255, 0.32);
+}
+.login-form .group input[data-type="password"]{
+    text-security:circle;
+    -webkit-text-security:circle;
+}
+.login-form .group .label{
+    color:#e4e4e4;
+    font-size:12px;
+}
+.login-form .group .button{
+    background:#1161ee;
+}
+.login-form .group label .icon{
+    width:15px;
+    height:15px;
+    border-radius:2px;
+    position:relative;
+    display:inline-block;
+    background:rgba(255,255,255,.1);
+}
+.login-form .group label .icon:before,
+.login-form .group label .icon:after{
+    content:'';
+    width:10px;
+    height:2px;
+    background:#fff;
+    position:absolute;
+    -webkit-transition:all .2s ease-in-out 0s;
+    transition:all .2s ease-in-out 0s;
+}
+.login-form .group label .icon:before{
+    left:3px;
+    width:5px;
+    bottom:6px;
+    -webkit-transform:scale(0) rotate(0);
+    -ms-transform:scale(0) rotate(0);
+    transform:scale(0) rotate(0);
+}
+.login-form .group label .icon:after{
+    top:6px;
+    right:0;
+    -webkit-transform:scale(0) rotate(0);
+    -ms-transform:scale(0) rotate(0);
+    transform:scale(0) rotate(0);
+}
+.login-form .group .check:checked + label{
+    color:#fff;
+}
+.login-form .group .check:checked + label .icon{
+    background:#1161ee;
+}
+.login-form .group .check:checked + label .icon:before{
+    -webkit-transform:scale(1) rotate(45deg);
+    -ms-transform:scale(1) rotate(45deg);
+    transform:scale(1) rotate(45deg);
+}
+.login-form .group .check:checked + label .icon:after{
+    -webkit-transform:scale(1) rotate(-45deg);
+    -ms-transform:scale(1) rotate(-45deg);
+    transform:scale(1) rotate(-45deg);
+}
+.login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
+    -webkit-transform:rotate(0);
+    -ms-transform:rotate(0);
+    transform:rotate(0);
+}
+.login-html .sign-up:checked + .tab + .login-form .sign-up-htm{
+    -webkit-transform:rotate(0);
+    -ms-transform:rotate(0);
+    transform:rotate(0);
+}
+
+.hr{
+    height:2px;
+    margin:60px 0 50px 0;
+    background:rgba(255,255,255,.2);
+}
+.foot-lnk{
+    text-align:center;
+}

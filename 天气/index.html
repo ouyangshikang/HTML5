@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/top.css"/>
+		<link rel="stylesheet" type="text/css" href="css/header.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bottom.css"/>
+	</head>
+	<body>
+		<main class="top" style="z-index: 2;">
+			<div class="p">
+			<p>首页</p>
+			<p>预报</p>
+			<p>雷达</p>
+			<p>临近预报</p>
+			<p>专业产品</p>
+			<p>资讯</p>
+			<p>生活</p>
+			<p>滑雪</p>
+			<p>产创平台</p>
+			</div>
+			<div class="more">更多</div>
+			<div class="tright">
+				<p>厦门</p>
+				<div class="tone"></div>
+				<div class="ttwo"></div>
+				<p>15℃/23℃</p>
+				<div class="tthree">+</div>
+			</div>
+		</main>
+		<main class="header" style="z-index: 2;">
+			<div class="logo"></div>
+			<div class="hp">预报</div>
+			<div class="input">
+				<input type="text" style="border: 0px;" placeholder="输出城市名查询城市"/>
+				<img src="images/sousou.jpg" />
+			</div>
+			
+		</main>
+		<main class="bottom">
+			<div class="bone">
+				<p>厦门 > 城区</p>
+				<p>11:30 更新</p>
+			</div>
+			<div class="btwo">
+				<div class="btwo_one" id="one" onclick="show(0)">今天</div>
+				<div class="btwo_one" onclick="show(1)">五天</div>
+				<div class="btwo_one" onclick="show(2)">更长时间</div>
+				<div class="btwo_one" onclick="show(3)">天气日历</div>
+				<div class="btwo_one" onclick="show(4)">雷达圈</div>
+			</div>
+			<div class="bthree">	
+			</div>
+			<div class="fiveday" style="visibility: hidden;">
+					<div class="one" onclick="showTo(0) ">
+						<p>12日 星期四</p>
+						<img src="images/day_qing.png"/>
+						<p>晴</p>
+						<p>25℃/16℃</p>
+						<p>微风</p>
+					</div>
+					<div class="two" onclick="showTo(1)">
+						<p>12日 星期五</p>
+						<img src="images/day_xiaoyu.png"/>
+						<p>小雨</p>
+						<p>18℃/12℃</p>
+						<p>南风</p>
+					</div>
+					<div class="three" onclick="showTo(2)">
+						<p>12日 星期六</p>
+						<img src="images/day_dayu.png"/>
+						<p>大雨</p>
+						<p>12℃/7℃</p>
+						<p>北风</p>
+					</div>
+					<div class="four" onclick="showTo(3)">
+						<p>12日 星期天</p>
+						<img src="images/day_yin.png"/>
+						<p>阴</p>
+						<p>8℃/2℃</p>
+						<p>无持续风向</p>
+					</div>
+					<div class="five" onclick="showTo(4)">
+						<p>12日 星期一</p>
+						<img src="images/day_daxue.png"/>
+						<p>大雪</p>
+						<p>-2℃/-10℃</p>
+						<p>东南风</p>
+					</div>
+			</div>
+			<div class="oneday" style="visibility: hidden;">
+				<p class="onedayp1">星期四</p>
+				<img class="onedayimg" src="images/days/qing.png"/>
+				<p class="onedayp2">晴</p>
+				<p class="onedayp3">25℃/16℃</p>
+			</div>	
+			
+			
+		</main>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>
+
+

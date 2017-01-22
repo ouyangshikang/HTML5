@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <title>相册</title>
+    <meta charset=gb2312>
+    <link type="text/css" href="style.css" rel="stylesheet">
+    <style>
+        #mask{
+            background: #161616;
+            position: absolute;
+            top:0;left:0;z-index:10;
+            opacity: 0.8;
+        }
+        #content{
+            position: absolute;
+            left:30%;top:25%;
+            border:5px solid #ffae83;
+            width: 500px;
+            display: block;
+            z-index: 20;
+        }
+    </style>
+ </head>
+ 
+  <body>
+  <div class="container">  
+   <img class="pic pic1" src="img/01.jpg">
+   <img class="pic pic2" src="img/02.jpg">
+   <img class="pic pic3" src="img/03.jpg">
+   <img class="pic pic4" src="img/04.jpg">
+   <img class="pic pic5" src="img/05.jpg">
+   <img class="pic pic6" src="img/06.jpg">
+   </div>
+
+  <!--<div id="mask"></div>-->
+  </body>
+<script>
+    window.onload=function () {
+        var pic = document.getElementsByTagName("img");
+        var windowHeight = document.body.scrollHeight || document.documentElement.scrollHeight;
+        var windowWidth = document.body.scrollWidth || document.documentElement.scrollWidth;
+        for(var i=0;i<pic.length;i++){
+            pic[i].onclick = function(){
+                var div =  document.createElement("div");
+                div.setAttribute("id","mask");
+                //alert( windowHeight+"....."+windowWidth);
+                document.body.appendChild(div);
+                div.style.width = windowWidth+"px";
+                div.style.height = windowHeight+"px";
+                var content =  document.createElement("img");
+                //alert(src);
+                content.setAttribute("id","content");
+                content.setAttribute("src",this.src);
+                document.body.appendChild(content);
+                div.onclick = function () {
+                    document.body.removeChild(content);
+                    document.body.removeChild(div);
+                }
+            };
+
+        }
+
+    }
+</script>
+</html>

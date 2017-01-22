@@ -1,0 +1,70 @@
+html,body{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+}
+.top{
+	height: 45px;
+	width: 100%;
+	background-color: #043567;
+	display: flex;
+	position: relative;
+}
+.p{
+	
+	height: 100%;
+	width: 50%;
+	margin-left: 15%;
+	-moz-user-select: none;
+}
+.more{
+	display: flex;
+	height: 45px;
+	width: 20%;
+	line-height: 45px;
+	color: white;
+	margin-left: 30px;
+	-moz-user-select: none;
+}
+.more:hover{
+	color: red;
+	cursor: pointer;
+}
+.p p{
+	margin-top: 0;
+	height: 22px;
+	color: white;
+	display:inline-block;
+	margin:13px 5px;
+	text-align: 22px;
+	
+}
+.p p:hover{
+	color: red;
+	cursor: pointer;
+}
+.tright{
+	height: 100%;
+	width: 30%;
+	display: flex;
+}
+.tright p{
+	margin-top: 0;
+	height: 22px;
+	color: white;
+	display:inline-block;
+	margin:13px 5px;
+	text-align: 22px;
+	-moz-user-select: none;
+}
+.tthree{
+	margin-top: 0;
+	height: 20px;
+	color: white;
+	margin: 11px 5px;
+	text-align: center;
+	line-height: 20px;
+	font-size: x-large;
+	-moz-user-select: none;
+}

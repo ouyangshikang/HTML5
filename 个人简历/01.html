@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本滚动练习</title>
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
+</head>
+<style>
+    .header{
+        width: 100px;height: 50px;position: fixed;font-size: 50px;
+        top:0;right: 100px;z-index: 99;
+    }
+    #fullPageMenu{
+        position: fixed;font-size: 30px;
+        top:0;z-index: 99;
+    }
+</style>
+<body>
+    <div class="header">header</div>
+    <!--<ul id="fullPageMenu">-->
+        <!--<li data-menuanchor="page1"><a href="#page1">第一页</a></li>-->
+        <!--<li data-menuanchor="page2"><a href="#page2">第二页</a></li>-->
+        <!--<li data-menuanchor="page3"><a href="#page3">第三页</a></li>-->
+        <!--<li data-menuanchor="page4"><a href="#page4">第四页</a></li>-->
+    <!--</ul>-->
+    <div id="fullPage">
+        <div class="section active"><h1>第一页</h1></div>
+        <div class="section">
+            <div class="slide">slide1</div>
+            <div class="slide">slide2</div>
+            <div class="slide">slide3</div>
+            <div class="slide">slide4</div>
+        </div>
+        <div class="section "><h1>第三页</h1></div>
+        <div class="section"><h1>第四页</h1></div>
+    </div>
+
+    <script>
+        $(function () {
+            $("#fullPage").fullpage({
+                sectionsColor:['green','orange','gray','red'],
+                //controlArrows:false,  //定义是否用箭头来控制slide,默认是true
+                //verticalCentered:false//每页内容是否垂直居中,默认是true
+                //resize:true//字体大小随窗口变化，默认false
+                //scrollingSpeed:2000//页面滚动速度，默认700
+                anchors:['page1','page2','page3','page4'],//定义锚链接,定义时不需要加'#'
+                //css3:true//是否使用css3 transform来实现滚动效果，默认true;
+                //loopTop:true,//滚动到最顶部后是否滚底部,默认false
+                //loopBottom:true,//滚动到最底部后是否滚回顶部,默认false
+                //loopHorizontal:false//左右滑块是否循环滑动,默认true
+                //autoScrolling:false//是否使用插件的滚动方式，默认为true
+                //scrollBar:true//是否包含滚动条，默认为false
+                //fixedElements: '.header' //固定的元素，默认为NULL，需要配置一个jquery选择器
+                //keyboardScrolling:false//是否使用键盘方向键导航,默认为true
+                //continuousVertical:true//是否循环滚动，默认false,与 loopTop 及 loopBottom 不兼容
+                //menu:'#fullPageMenu'//绑定菜单，设定的相关属性与 anchors 的值对应后，菜单可以控制滚动,默认false
+                navigation:true,//是否显示项目导航,默认false
+                navigationPosition:'right',//项目导航的位置，可选left或right
+                navigationTooltips:['page1','page2','page3','page4'],//项目导航的tip
+                showActiveTooltip:true,//是否显示当前导航的tooltip信息，默认false
+                slidesNavigation:true,//是否显示横向幻灯片的导航,默认为false
+                slidesNavPosition:'top',//导航的位置，可以为top或bottom
+                scrollOverflow:true//内容超过满屏后是否显示滚动条,默认为false
+
+            });
+        })
+    </script>
+</body>
+</html>

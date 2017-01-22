@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>物流链</title>
+    <link href="./css/index.css" rel="stylesheet" type="text/css">
+    <link href="./css/responsive-menu.css" rel="stylesheet" type="text/css">
+    <script src="./js/jquery-1.8.0.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="top">
+    <div class="main rm-container rm-layout-expanded" style="position:relative">
+        <span style=" padding:0; position:absolute; left:0; top:5px"><a href="#"><img src="./img/56linkedlogo.png"></a></span>
+        <nav class="rm-nav rm-lighten rm-parent" style="margin-left:155px; margin-top:15px; margin-bottom:20px">
+            <ul class="rm-menu rm-top-menu rm-css-animate rm-menu-expanded" aria-hidden="false" style="max-height: none; display: inline-table; overflow: visible;">
+                <li class="rm-menu-item rm-first">
+                    <a href="#" class="current" tabindex="0">首页</a>
+                </li>
+                <li class="rm-menu-item">
+                    <a href="#" tabindex="0">功能1</a>
+                </li>
+                <li class="rm-menu-item rm-parent">
+                    <a href="#" tabindex="0">功能2></a>
+                </li>
+                <li class="rm-menu-item rm-parent">
+                    <a href="#" tabindex="0">功能3</a>
+                </li>
+
+                <li class="rm-menu-item rm-2nd-last">
+                    <a href="#" class="bounceIn dialog trial" tabindex="0">功能4</a>
+                </li>
+                <li class="rm-menu-item rm-last">
+                    <a href="#" tabindex="0">功能5</a>
+                </li>
+            </ul>
+        </nav>
+
+        <h1><span style="padding:0 8px 0 0; font-weight:normal;"></span>gay平欢迎您</h1>
+
+    </div>
+</div>
+
+<div id="slide">
+    <ul style="width: 3840px; left: -1920px;">
+
+        <li><img src="./img/banner2.jpg" style="left: -8.5px;"></li>
+
+
+        <li><img src="./img/banner1.jpg" style="left: -8.5px;"></li>
+    </ul>
+    <ol>
+        <li class=""><a href="javascript:;">1</a></li>
+        <li class="selected"><a href="javascript:;">2</a></li>
+
+    </ol>
+</div>
+
+<script src="./js/move.js" type="text/javascript"></script>
+<script>
+    window.onload = function () {
+        var oSlide = document.getElementById("slide");
+        var oUl = oSlide.getElementsByTagName("ul")[0];
+        var aLi = oUl.getElementsByTagName("li");
+        var aImg = oUl.getElementsByTagName("img"); //获取图片
+        var oOl = oSlide.getElementsByTagName("ol")[0];
+        var aLiOl = oOl.getElementsByTagName("li"); //获取按钮
+        var imgWidth = 1920;
+        var iNow = 0;
+        oUl.style.width = aImg.length * imgWidth + "px";
+        //让图片居中
+        function toResize() {
+            var viewWidth = document.documentElement.clientWidth;
+
+            if (viewWidth > 1000) {
+                for (var i = 0; i < aImg.length; i++) {
+                    aImg[i].style.left = -(imgWidth - viewWidth) / 2 + "px";
+                }
+            }
+        }
+        toResize();
+        window.onresize = function () {
+            toResize();
+        }
+        // 轮播开始
+        for (var i = 0; i < aLiOl.length; i++) {
+            aLiOl[i].index = i;
+            aLiOl[i].onmouseover = function () {
+                for (var i = 0; i < aLiOl.length; i++) {
+                    aLiOl[i].className = "";
+                }
+                this.className = "selected";
+                startMove(oUl, {left: -this.index * imgWidth});
+            }
+        }
+        setInterval(function toRun() {
+            if (iNow == aLi.length - 1) {
+                iNow = 0;
+            } else {
+                iNow++;
+            }
+
+            for (var i = 0; i < aLiOl.length; i++) {
+                aLiOl[i].className = "";
+            }
+
+            aLiOl[iNow].className = "selected";
+            startMove(oUl, {left: -iNow * imgWidth});
+
+        }, 8000);
+    };
+</script>
+
+<div class="login-wrap">
+    <div class="login-html">
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked /><label for="tab-1" class="tab">用户登录</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up" /><label for="tab-2" class="tab" style="color: #11a5ee;">后台</label>
+        <div class="login-form">
+            <div class="sign-in-htm">
+                <div class="group">
+                    <label for="user" class="label">用户名</label>
+                    <input id="user" type="text" class="input" />
+                </div>
+                <div class="group">
+                    <label for="pass" class="label">密码</label>
+                    <input id="pass" type="password" class="input" data-type="password" />
+                </div>
+                <div class="group">
+                    <input id="check" type="checkbox" class="check" checked />
+                    <label for="check"><span class="icon"></span> 记住密码</label>
+                </div>
+                <div class="group">
+                    <input type="submit" class="button" value="登录" />
+                </div>
+                <div class="hr"></div>
+            </div>
+
+
+            <div class="sign-up-htm">
+                <div class="group">
+                    <label for="user" class="label">管理员账号</label>
+                    <input id="user" type="text" class="input" />
+                </div>
+                <div class="group">
+                    <label for="pass" class="label">管理员密码</label>
+                    <input id="pass" type="password" class="input" data-type="password" />
+                </div>
+                <div class="group">
+                    <input id="check" type="checkbox" class="check" checked />
+                    <label for="check"><span class="icon"></span> 记住密码</label>
+                </div>
+                <div class="group">
+                    <input type="submit" class="button" value="登录" />
+                </div>
+                <div class="hr"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body></html>

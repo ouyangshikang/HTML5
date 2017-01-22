@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- saved from url=(0185)http://www.sucaijiayuan.com/demo/%E4%BA%AC%E4%B8%9C%E5%95%86%E5%9F%8EjQuery%E7%9C%81%E5%B8%82%E5%8C%BA%E4%B8%89%E7%BA%A7%E8%81%94%E5%8A%A8%E9%80%89%E6%8B%A9%E4%BB%A3%E7%A0%81/index.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>京东商城jQuery省市区三级联动选择代码 - 素材家园 - www.sucaijiayuan.com</title>
+<script src="jquery-1.11.3.min.js"></script>
+<script src="Popt.js"></script>
+<script src="cityJson.js"></script>
+<script src="citySet.js"></script>
+<style type="text/css">
+
+ul, ol, dl { list-style: none; }
+._citys {
+	width: 410px;
+	display: inline-block;
+	border: 2px solid #eee;
+	padding: 5px;
+	position: relative;
+}
+._citys span {
+	color: #ffffff;
+	height: 18px;
+	width: 18px;
+	line-height: 18px;
+	text-align: center;
+	border-radius: 50%;
+	position: absolute;
+	right: -7px;
+	top: -7px;
+	cursor: pointer;
+	background: #463434;
+}
+._citys0 {
+	width: 100%; height: 34px; display: inline-block; border-bottom: 2px solid #edd28b; padding: 0; margin: 0; }
+._citys0 li {
+	display: inline-block;
+	line-height: 32px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #005aa0;
+	width: 74px;
+	text-align: center;
+	cursor: pointer;
+	border: 1px solid #ddd;
+}
+._citys0 li i {
+	background: url(arrow02.png);
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	margin-left: 5px;
+}
+.citySel { background-color: #ffffff; color: #000 !important;    border: 2px solid #edd28b;border-bottom: none; }
+._citys1 { width: 100%; display: inline-block; padding: 10px 0; }
+._citys1 a {
+	width: 45px;
+	height: 25px;
+	display: inline-block;
+	background-color: #ffffff;
+	color: #005aa0;
+	margin-right: 57px;
+	line-height: 25px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 12px;
+	overflow: hidden;
+}
+._citys1 a:hover { color:#fff; background-color:  #005aa0; }
+.AreaS { background-color: #56b4f8 !important; color: #fff !important; }
+</style>
+</head>
+<body>
+
+<div style="width:420px;margin:40px auto;">
+	<input type="text" id="city">
+</div>
+<script type="text/javascript">
+$("#city").click(function (e) {
+	SelCity(this,e);
+});
+</script>
+
+
+
+
+</body></html>
